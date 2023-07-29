@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import { useState } from 'react';
-import { Box } from '@chakra-ui/react';
+import { Box, Center, Text } from '@chakra-ui/react';
 import RepoCard from './RepoCard';
 
 const RepoFetch = ({ username }: { username: string }) => {
@@ -25,15 +25,19 @@ const RepoFetch = ({ username }: { username: string }) => {
   };
 
   return (
-    <Box>
-      <ul style={{ overflowY: 'scroll' }}>
-        {repos.map((repo, idx) => (
-          <RepoCard
-            key={idx}
-            repo={repo}
-          />
-        ))}
-      </ul>
+    <Box
+      width={'50%'}
+      zIndex={'1'}
+    >
+      <Center>
+        <Text>Project Panel</Text>
+      </Center>
+      {repos.map((repo, idx) => (
+        <RepoCard
+          key={idx}
+          repo={repo}
+        />
+      ))}
     </Box>
   );
 };

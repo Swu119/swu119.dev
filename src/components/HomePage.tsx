@@ -1,35 +1,27 @@
-import RepoFetch from './RepoFetch';
 import Header from './Header';
+import RepoFetch from './RepoFetch';
+import Intro from './Intro';
+import Background from './Background';
 import { Box } from '@chakra-ui/react';
 
 const HomePage = () => {
   const username = 'Swu119';
 
-  const scrollContainer = document.getElementById('scroll-container');
-  const colors = ['red', 'green', 'blue']; // Array of background colors
-
-  document.addEventListener('scroll', function () {
-    const scrollPercentage =
-      (window.scrollY /
-        (document.documentElement.scrollHeight - window.innerHeight)) *
-      100;
-    const colorIndex = Math.floor(scrollPercentage / (100 / colors.length));
-    const backgroundColor = colors[colorIndex];
-    console.log(backgroundColor);
-
-    scrollContainer!.style.backgroundColor = backgroundColor;
-  });
-
   return (
     <Box
       id='scroll-container'
-      height={'1000px'}
+      height={'100%'}
       transition={'background-color 0.3s ease'}
     >
-      <Header />
-      <Box display={'flex'}>
+      <Header navids={['github', 'super', 'fun']} />
+      <Box id={'education'}>Graduate</Box>
+      <Box
+        id={'github'}
+        position={'relative'}
+        display={'flex'}
+      >
         <RepoFetch username={username} />
-        <Box width={'100%'}> what </Box>
+        <Intro />
       </Box>
     </Box>
   );

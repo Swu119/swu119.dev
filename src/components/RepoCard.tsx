@@ -15,9 +15,14 @@ import {
 function RepoCard({ repo }: { repo: any }) {
   return (
     <Card
-      maxW='16.6%'
+      as='a'
+      href={repo.html_url}
+      maxW='50%'
       h={'s'}
       display={'inline-block'}
+      _hover={{
+        background: '#abffff',
+      }}
     >
       <CardBody>
         <Image
