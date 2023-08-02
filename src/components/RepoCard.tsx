@@ -17,7 +17,7 @@ function RepoCard({ repo }: { repo: any }) {
     <Card
       as='a'
       href={repo.html_url}
-      maxW='50%'
+      maxW='25%'
       h={'s'}
       display={'inline-block'}
       _hover={{

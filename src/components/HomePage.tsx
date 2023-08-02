@@ -12,16 +12,22 @@ const HomePage = () => {
       id='scroll-container'
       height={'100%'}
       transition={'background-color 0.3s ease'}
+      backgroundColor={'#abffff'}
     >
-      <Header navids={['github', 'super', 'fun']} />
-      <Box id={'education'}>Graduate</Box>
+      <Header navids={['about me', 'github', 'contact']} />
+      <Box
+        paddingTop={'50px'}
+        id={'about me'}
+      >
+        <Intro />
+      </Box>
       <Box
         id={'github'}
         position={'relative'}
         display={'flex'}
+        zIndex={'1'}
       >
         <RepoFetch username={username} />
-        <Intro />
       </Box>
     </Box>
   );

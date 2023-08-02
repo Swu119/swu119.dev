@@ -25,19 +25,23 @@ const RepoFetch = ({ username }: { username: string }) => {
   };
 
   return (
-    <Box
-      width={'50%'}
-      zIndex={'1'}
-    >
-      <Center>
-        <Text>Project Panel</Text>
-      </Center>
-      {repos.map((repo, idx) => (
-        <RepoCard
-          key={idx}
-          repo={repo}
-        />
-      ))}
+    <Box>
+      <Text
+        fontFamily={'lilita'}
+        fontWeight={'bold'}
+        fontSize={'2xl'}
+        paddingLeft={'30px'}
+      >
+        Project Panel
+      </Text>
+      <Box>
+        {repos.map((repo, idx) => (
+          <RepoCard
+            key={idx}
+            repo={repo}
+          />
+        ))}
+      </Box>
     </Box>
   );
 };

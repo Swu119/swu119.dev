@@ -1,0 +1,23 @@
+.intro em {
+    color: orange
+}
+
+@keyframes logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+#sun {
+    position: relative;
+    transition: top ease-in-out 1s;
+    top: 0px;
+    animation: logo-spin infinite 5s linear;
+}
+
+#sun:hover {
+    top:-55px;
+}
