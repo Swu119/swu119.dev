@@ -10,11 +10,11 @@ const Header = ({ navids }: { navids: string[] }) => {
       align-items='center'
       position='sticky'
       top='-5px'
-      zIndex='3'
+      zIndex='5'
       height='50px'
       min-height='50px'
       width='100%'
-      background='#ffabab'
+      background='#FF9191'
       padding='0 1rem'
       box-shadow='0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%)'
     >
@@ -30,9 +30,8 @@ const Header = ({ navids }: { navids: string[] }) => {
         <nav className='nav__container'>
           <ul>
             {navids.map((navid, idx) => (
-              <li>
+              <li key={idx}>
                 <Link
-                  key={idx}
                   activeClass='active'
                   smooth
                   spy

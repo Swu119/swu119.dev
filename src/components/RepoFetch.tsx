@@ -30,6 +30,7 @@ const RepoFetch = ({ username }: { username: string }) => {
         fontFamily={'lilita'}
         fontWeight={'bold'}
         fontSize={'2xl'}
+        color={'#6c96f5'}
         paddingLeft={'30px'}
       >
         Project Panel

@@ -1,7 +1,3 @@
-.intro em {
-    color: orange
-}
-
 @keyframes logo-spin {
     from {
       transform: rotate(0deg);
@@ -10,6 +6,14 @@
       transform: rotate(360deg);
     }
   }
+
+.intro em {
+    color: orange
+}
+
+.intro em:hover ~ #sun {
+  top:-55px;
+}
 
 #sun {
     position: relative;
@@ -20,4 +24,27 @@
 
 #sun:hover {
     top:-55px;
+}
+
+#cloud-intro{
+  position: absolute;
+  left: -75%;
+  top: -50%;
+  width: 200%;
+  height: 300%;
+  z-index: 3;
+  background: url(https://static.radulescu.me/examples/clouds/clouds1000.png);
+  background: url(https://static.radulescu.me/examples/clouds/clouds1000.png) 0 200px,
+              url(https://static.radulescu.me/examples/clouds/clouds1200_1.png) 0 300px,
+              url(https://static.radulescu.me/examples/clouds/clouds1000_blur3.png) 100px 250px;
+	animation: wind 30s linear infinite;
+}
+@keyframes wind{
+  0% {
+    background-position: 0 200px, 0 300px, 100px 250px;
+  }
+  100% {
+    background-position: 1000px 200px, 1200px 300px, 1100px 250px;
+  }
+
 }

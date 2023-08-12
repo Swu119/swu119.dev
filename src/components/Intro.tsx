@@ -11,16 +11,17 @@ function Intro() {
       width={'100%'}
       position={'relative'}
     >
+      <div id='cloud-intro'></div>
       <Text
         className='intro'
-        color={'black'}
+        color={'#6c96f5'}
         fontWeight={'bold'}
         fontSize={'3xl'}
         textAlign={'center'}
         lineHeight={'50px'}
         fontFamily={'lilita'}
         position={'relative'}
-        zIndex={'2'}
+        zIndex={'4'}
       >
         Hi, I'm <em>Sonny Wu</em>.
         <br />
@@ -32,23 +33,22 @@ function Intro() {
         position={'absolute'}
         left={'49%'}
         top={'0%'}
-        zIndex={'1'}
+        zIndex={'2'}
       >
         <FaSun
           id='sun'
           color='#ffd74e'
           size={'40%'}
         />
+        <Box
+          position={'absolute'}
+          bgSize={'500%'}
+          boxSize={'140px'}
+          left={'-5%'}
+          top={'50%'}
+          backgroundColor={'#abffff'}
+        ></Box>
       </Box>
-      <Box
-        position={'absolute'}
-        bgSize={'500%'}
-        boxSize={'140px'}
-        left={'48%'}
-        top={'28%'}
-        zIndex={'1'}
-        backgroundColor={'#abffff'}
-      ></Box>
     </Box>
   );
 }

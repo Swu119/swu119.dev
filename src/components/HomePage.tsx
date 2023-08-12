@@ -1,6 +1,7 @@
 import Header from './Header';
 import RepoFetch from './RepoFetch';
 import Intro from './Intro';
+import Contacts from './Contacts';
 import Background from './Background';
 import { Box } from '@chakra-ui/react';
 
@@ -14,9 +15,9 @@ const HomePage = () => {
       transition={'background-color 0.3s ease'}
       backgroundColor={'#abffff'}
     >
-      <Header navids={['about me', 'github', 'contact']} />
+      <Header navids={['about me', 'github', 'contact me']} />
       <Box
-        paddingTop={'50px'}
+        padding={'100px'}
         id={'about me'}
       >
         <Intro />
@@ -25,9 +26,15 @@ const HomePage = () => {
         id={'github'}
         position={'relative'}
         display={'flex'}
-        zIndex={'1'}
+        zIndex={'3'}
       >
         <RepoFetch username={username} />
+      </Box>
+      <Box
+        id={'contact me'}
+        width={'100%'}
+      >
+        <Contacts />
       </Box>
     </Box>
   );
