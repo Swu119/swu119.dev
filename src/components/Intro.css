@@ -16,6 +16,8 @@
 }
 
 #sun {
+    
+    margin-bottom: -3.3em;
     position: relative;
     transition: top ease-in-out 1s;
     top: 0px;
@@ -32,7 +34,7 @@
   top: -50%;
   width: 200%;
   height: 300%;
-  z-index: 3;
+  z-index: 2;
   background: url(https://static.radulescu.me/examples/clouds/clouds1000.png);
   background: url(https://static.radulescu.me/examples/clouds/clouds1000.png) 0 200px,
               url(https://static.radulescu.me/examples/clouds/clouds1200_1.png) 0 300px,

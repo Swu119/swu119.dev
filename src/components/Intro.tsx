@@ -14,7 +14,7 @@ function Intro() {
       <div id='cloud-intro'></div>
       <Text
         className='intro'
-        color={'#6c96f5'}
+        color={'#7187d0'}
         fontWeight={'bold'}
         fontSize={'3xl'}
         textAlign={'center'}
@@ -30,24 +30,18 @@ function Intro() {
         Check them out below!
       </Text>
       <Box
+        paddingTop={'60px'}
         position={'absolute'}
-        left={'49%'}
-        top={'0%'}
+        left={'48.8%'}
+        top={'-30%'}
         zIndex={'2'}
+        overflow={'hidden'}
       >
         <FaSun
           id='sun'
           color='#ffd74e'
           size={'40%'}
         />
-        <Box
-          position={'absolute'}
-          bgSize={'500%'}
-          boxSize={'140px'}
-          left={'-5%'}
-          top={'50%'}
-          backgroundColor={'#abffff'}
-        ></Box>
       </Box>
     </Box>
   );

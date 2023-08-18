@@ -33,7 +33,7 @@ const RepoFetch = ({ username }: { username: string }) => {
         color={'#6c96f5'}
         paddingLeft={'30px'}
       >
-        Project Panel
+        Github Repositories
       </Text>
       <Box>
         {repos.map((repo, idx) => (
